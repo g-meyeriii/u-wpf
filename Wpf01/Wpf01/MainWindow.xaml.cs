@@ -57,5 +57,32 @@ namespace Wpf01
         {
             MessageBox.Show("Thanks for the Click");
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Thanks for the Click-Direct Event");
+        }
+        //this is a bubbling event 
+        private void Button_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Mouse button up/ was released- Bubbling event (Went up visual tree)");
+        }
+
+        private void Button_PreviewMouseUp(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Mouse button up/ was released-tunneling event (Goes down visual tree)");
+        }
+
+        private void Button_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show(" Left mouse button down -tunneling event (Goes down visual tree)");
+
+        }
+
+        private void Button_PreviewMouseRightButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("Right mouse button up/ was released-tunneling event (Goes down visual tree)");
+
+        }
     }
 }

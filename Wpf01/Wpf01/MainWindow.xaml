@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="My First GUI" Height="450" Width="800">
 
+    <Grid>
+        <Button Content="Click Me" PreviewMouseLeftButtonDown="Button_PreviewMouseLeftButtonDown" PreviewMouseRightButtonUp="Button_PreviewMouseRightButtonUp" Width="150" Height="100"/>
+
+
+
+    </Grid>
+    <!--
     <StackPanel>
         <TextBlock HorizontalAlignment="Center" Margin="20">Hello World!</TextBlock>
         <ListBox Height="100" Width="100">
@@ -16,7 +23,7 @@
         </ListBox>
         <Button Content="Click Me" Click="Button_Click" Margin="20" Height="50" Width="100" FontSize="20"></Button>
     </StackPanel>
-    <!--  <Grid>
+     <Grid>
     
         <Button>
             <Button.Width>200</Button.Width>
