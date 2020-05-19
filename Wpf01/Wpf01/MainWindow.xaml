@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:Wpf01"
         mc:Ignorable="d"
         Title="My First GUI" Height="450" Width="800">
-
+    <StackPanel>
+        <TextBox Name="MyTextBox" Width="100" Margin="50" Text="{Binding ElementName=MySlider, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <Slider IsSnapToTickEnabled="True" Name="MySlider" Minimum="0" Maximum="100"></Slider>
+        
+    </StackPanel>
+    
+    <!--
     <Grid>
         <Button Height="100" Width="200" Content="Click Me" Background="PaleVioletRed">
             <Button.Style>
@@ -22,7 +28,7 @@
         </Button>
 
     </Grid>
-    <!--
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
