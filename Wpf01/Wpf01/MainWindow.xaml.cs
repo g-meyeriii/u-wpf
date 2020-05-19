@@ -28,12 +28,20 @@ namespace Wpf01
         //public static readonly DependencyProperty myDependencyProperty =
         //    DependencyProperty.Register("MyProperty", typeof(int), typeof(MainWindow), new PropertyMetadata(0));
 
+            public Sum SumObject { get; set; }
+
         public MainWindow()
         {
 
             InitializeComponent();
-            MySlider.Value = 30;
-            MyTextBox.Text = MySlider.Value.ToString();
+
+            SumObject = new Sum { Num1 = "1", Num2 = "3" };
+            this.DataContext = SumObject;
+
+            
+            
+            //MySlider.Value = 30;
+            //MyTextBox.Text = MySlider.Value.ToString();
 
             //Grid grid = new Grid();
             //this.Content = grid;
