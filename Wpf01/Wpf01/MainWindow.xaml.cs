@@ -84,5 +84,10 @@ namespace Wpf01
             MessageBox.Show("Right mouse button up/ was released-tunneling event (Goes down visual tree)");
 
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
