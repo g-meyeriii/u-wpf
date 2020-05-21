@@ -124,28 +124,30 @@ namespace Wpf01
 
             //}
         }
-        public void cbAllCheckedChanged (object sender, RoutedEventArgs e)
-        {
-            bool newVal = (cbAllToppings.IsChecked == true);
-            cbPepporoni.IsChecked = newVal;
-            cbMushroom.IsChecked = newVal;
-            cbMozzarella.IsChecked = newVal;
-            cbChicken.IsChecked = newVal;
-            cbVeggie.IsChecked = newVal;
-        }
 
-        public void cbSingleCheckedChanged (object sender, RoutedEventArgs e)
-        {
-            cbAllToppings.IsChecked = null;
-            if((cbChicken.IsChecked ==true) && (cbMozzarella.IsChecked ==true)&& (cbMushroom.IsChecked == true) && (cbPepporoni.IsChecked == true)&&(cbVeggie.IsChecked==true))
-            {
-                cbAllToppings.IsChecked = true;
-            }
-            if ((cbChicken.IsChecked == false) && (cbMozzarella.IsChecked == false) && (cbMushroom.IsChecked == false) && (cbPepporoni.IsChecked == false) && (cbVeggie.IsChecked == false))
-            {
-                cbAllToppings.IsChecked = false;
-            }
-        }
+
+        //public void cbAllCheckedChanged (object sender, RoutedEventArgs e)
+        //{
+        //    bool newVal = (cbAllToppings.IsChecked == true);
+        //    cbPepporoni.IsChecked = newVal;
+        //    cbMushroom.IsChecked = newVal;
+        //    cbMozzarella.IsChecked = newVal;
+        //    cbChicken.IsChecked = newVal;
+        //    cbVeggie.IsChecked = newVal;
+        //}
+
+        //public void cbSingleCheckedChanged (object sender, RoutedEventArgs e)
+        //{
+        //    cbAllToppings.IsChecked = null;
+        //    if((cbChicken.IsChecked ==true) && (cbMozzarella.IsChecked ==true)&& (cbMushroom.IsChecked == true) && (cbPepporoni.IsChecked == true)&&(cbVeggie.IsChecked==true))
+        //    {
+        //        cbAllToppings.IsChecked = true;
+        //    }
+        //    if ((cbChicken.IsChecked == false) && (cbMozzarella.IsChecked == false) && (cbMushroom.IsChecked == false) && (cbPepporoni.IsChecked == false) && (cbVeggie.IsChecked == false))
+        //    {
+        //        cbAllToppings.IsChecked = false;
+        //    }
+        //}
         //private void Button_Click(object sender, RoutedEventArgs e)
         //{
         //if(lbMatches.SelectedItem != null)

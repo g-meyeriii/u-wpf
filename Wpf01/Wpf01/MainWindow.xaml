@@ -6,6 +6,11 @@
         xmlns:local="clr-namespace:Wpf01"
         mc:Ignorable="d"
         Title="My First GUI" Height="450" Width="800">
+    <Grid>
+        <TextBlock ToolTip="Please enter age below" Width="100" Height="100">Age</TextBlock>
+    </Grid>
+    
+    <!--
     <StackPanel>
         <Label FontWeight="Bold">Pizza Toppings</Label>
         <CheckBox Name ="cbAllToppings" IsThreeState="True" Checked="cbAllCheckedChanged" Unchecked="cbAllCheckedChanged">Add all</CheckBox>
@@ -23,7 +28,7 @@
 
         </StackPanel>
     </StackPanel>
-    <!--
+   
     <StackPanel>
         <ComboBox Name="comboBoxColors">
             <ComboBox.ItemTemplate>
