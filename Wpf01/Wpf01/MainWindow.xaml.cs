@@ -34,10 +34,12 @@ namespace Wpf01
         {
 
             InitializeComponent();
+          
 
 
 
-            comboBoxColors.ItemsSource = typeof(Colors).GetProperties();
+
+            //comboBoxColors.ItemsSource = typeof(Colors).GetProperties();
 
             //List<Match> matches = new List<Match>();
             //matches.Add(new Match() { Team1 = "Bayern Munich  ", Team2 = "  Real Madrid", Score1 = 3, Score2 = 2, Completion = 85});
@@ -50,8 +52,8 @@ namespace Wpf01
             //SumObject = new Sum { Num1 = "1", Num2 = "3" };
             //this.DataContext = SumObject;
 
-            
-            
+
+
             //MySlider.Value = 30;
             //MyTextBox.Text = MySlider.Value.ToString();
 
@@ -122,22 +124,45 @@ namespace Wpf01
 
             //}
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void cbAllCheckedChanged (object sender, RoutedEventArgs e)
         {
-            //if(lbMatches.SelectedItem != null)
-            //{
-            //    MessageBox.Show("Selected Match: "
-            //        + (lbMatches.SelectedItem as Match).Team1 + " " +
-            //         (lbMatches.SelectedItem as Match).Score1 + " " +
-            //         (lbMatches.SelectedItem as Match).Score2 + " " +
-            //         (lbMatches.SelectedItem as Match).Team2 
-            //         );
-
-            //}
-
+            bool newVal = (cbAllToppings.IsChecked == true);
+            cbPepporoni.IsChecked = newVal;
+            cbMushroom.IsChecked = newVal;
+            cbMozzarella.IsChecked = newVal;
+            cbChicken.IsChecked = newVal;
+            cbVeggie.IsChecked = newVal;
         }
+
+        public void cbSingleCheckedChanged (object sender, RoutedEventArgs e)
+        {
+            cbAllToppings.IsChecked = null;
+            if((cbChicken.IsChecked ==true) && (cbMozzarella.IsChecked ==true)&& (cbMushroom.IsChecked == true) && (cbPepporoni.IsChecked == true)&&(cbVeggie.IsChecked==true))
+            {
+                cbAllToppings.IsChecked = true;
+            }
+            if ((cbChicken.IsChecked == false) && (cbMozzarella.IsChecked == false) && (cbMushroom.IsChecked == false) && (cbPepporoni.IsChecked == false) && (cbVeggie.IsChecked == false))
+            {
+                cbAllToppings.IsChecked = false;
+            }
+        }
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //if(lbMatches.SelectedItem != null)
+        //{
+        //    MessageBox.Show("Selected Match: "
+        //        + (lbMatches.SelectedItem as Match).Team1 + " " +
+        //         (lbMatches.SelectedItem as Match).Score1 + " " +
+        //         (lbMatches.SelectedItem as Match).Score2 + " " +
+        //         (lbMatches.SelectedItem as Match).Team2 
+        //         );
+
+        //}
+
+        //}
     }
+
+  
     //public class Match
     //{
     //    public int Score1 { get; set; }

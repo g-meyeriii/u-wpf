@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="My First GUI" Height="450" Width="800">
     <StackPanel>
+        <Label FontWeight="Bold">Pizza Toppings</Label>
+        <CheckBox Name ="cbAllToppings" IsThreeState="True" Checked="cbAllCheckedChanged" Unchecked="cbAllCheckedChanged">Add all</CheckBox>
+        <StackPanel Margin="15">
+            <CheckBox Name="cbPepporoni" Checked="cbSingleCheckedChanged" Unchecked="cbSingleCheckedChanged">
+                <TextBlock>
+                    Pepporoni <Run Foreground="Red" FontWeight="Bold">Spicy</Run>
+                </TextBlock>
+            </CheckBox>
+            <CheckBox Name="cbMushroom" Checked="cbSingleCheckedChanged">Mushrooms</CheckBox>
+            <CheckBox Name="cbMozzarella" Checked="cbSingleCheckedChanged">Extra Mozzarella</CheckBox>
+            <CheckBox Name="cbChicken" Checked="cbSingleCheckedChanged">Chicken</CheckBox>
+            <CheckBox Name="cbVeggie" Checked="cbSingleCheckedChanged">Veggie</CheckBox>
+
+
+        </StackPanel>
+    </StackPanel>
+    <!--
+    <StackPanel>
         <ComboBox Name="comboBoxColors">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
@@ -18,7 +36,7 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
     </StackPanel>
-    <!--
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
