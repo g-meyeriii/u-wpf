@@ -125,6 +125,21 @@ namespace Wpf01
             //}
         }
 
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Please say yes!");
+        }
+        private void RadioButton_Checked1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Please say yes!");
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Thank you!!");
+        }
+
+
 
         //public void cbAllCheckedChanged (object sender, RoutedEventArgs e)
         //{
@@ -164,7 +179,7 @@ namespace Wpf01
         //}
     }
 
-  
+
     //public class Match
     //{
     //    public int Score1 { get; set; }

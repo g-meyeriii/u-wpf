@@ -6,11 +6,37 @@
         xmlns:local="clr-namespace:Wpf01"
         mc:Ignorable="d"
         Title="My First GUI" Height="450" Width="800">
+
+    <StackPanel Margin="10">
+        <Label FontWeight="Bold" FontSize="20" >Do you like Me</Label>
+        <RadioButton Margin="5" Checked="RadioButton_Checked_1">
+            <WrapPanel>
+                <Rectangle Fill="Green" Width="16" Height="16"></Rectangle>
+                <TextBlock Text="Yes" Foreground="Green" Margin="5,0,0,0" ></TextBlock>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton Margin="5" Checked="RadioButton_Checked">
+            <WrapPanel>
+                <Rectangle Fill="Red" Width="16" Height="16"></Rectangle>
+                <TextBlock Text="No" Foreground="Red" Margin="5,0,0,0"></TextBlock>
+            </WrapPanel>
+        </RadioButton>
+        <RadioButton Margin="5" IsChecked="True" Checked="RadioButton_Checked1">
+            <WrapPanel>
+                <Rectangle Fill="Yellow" Height="16" Width="16"></Rectangle>
+                <TextBlock Text="Maybe" Margin="5,0,0,0"></TextBlock>
+            </WrapPanel>
+        </RadioButton>
+    </StackPanel>
+    <!--
     <Grid>
+        <Button ToolTip="I'm a tool tip I'm useful" Width="150" Height="100">Hover for more info</Button>
+
         <TextBlock ToolTip="Please enter age below" Width="100" Height="100">Age</TextBlock>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="361,357,0,0" VerticalAlignment="Top"/>
     </Grid>
     
-    <!--
+
     <StackPanel>
         <Label FontWeight="Bold">Pizza Toppings</Label>
         <CheckBox Name ="cbAllToppings" IsThreeState="True" Checked="cbAllCheckedChanged" Unchecked="cbAllCheckedChanged">Add all</CheckBox>
