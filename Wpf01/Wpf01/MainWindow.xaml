@@ -6,6 +6,19 @@
         xmlns:local="clr-namespace:Wpf01"
         mc:Ignorable="d"
         Title="My First GUI" Height="450" Width="800">
+    <StackPanel>
+        <ComboBox Name="comboBoxColors">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}" Width="32" Height="32" Margin="5"></Rectangle>
+                        <TextBlock Text="{Binding Name}" FontSize="32"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+    </StackPanel>
+    <!--
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -37,7 +50,7 @@
         <Button Grid.Column="1" Click="Button_Click">Show Selected</Button>
     </Grid>
     
-    <!--
+   
     <StackPanel>
         <Label Content="Num1"/>
         <TextBox Width="100" Height="30" Text="{Binding Path=Num1, Mode=TwoWay}"/>
